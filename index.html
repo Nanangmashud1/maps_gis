@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judul Halaman Anda</title>
+    
+    
+    <link rel="stylesheet" href="leaflet.css">
+    <script src="leaflet.js"></script>
+    
+    <style>
+        
+        #map { height: 400px;
+         }
+    </style>
+</head>
+<body>
+    
+    <div id="map"></div>
+    
+    <script>
+        
+        var map = L.map('map').setView([-8.7939089,116.3700038,1552], 15);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        
+         var masjid = L.marker([-8.792057, 116.368381]).addTo(map);
+         var rumah = L.marker([-8.794763, 116.369757
+
+         ]).addTo(map);
+         var MADRASAH = L.marker([-8.789184, 116.370640]).addTo(map);
+         var KADUS = L.marker([-8.794310, 116.369431 ]).addTo(map);
+         var MADRASAH = L.marker([-8.789184, 116.370640]).addTo(map);
+         var BENGKEL = L.marker([-8.794062, 116.369603]).addTo(map);
+         
+          masjid.bindPopup("<b>masjid</b><br>masjid").openPopup();
+          rumah.bindPopup("<b>rumah</b><br>kuh").openPopup();
+          MADRASAH.bindPopup("<b>YAYASAN</b><br>ABDURRAHMAN MENGKUDU").openPopup();
+          KADUS.bindPopup("<b>KADUS</b><br>BALE").openPopup();
+          BENGKEL.bindPopup("<b>BENGKEL</b><br>VITA").openPopup();
+          
+
+
+    </script>
+</body>
+</html>
